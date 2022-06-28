@@ -1,16 +1,6 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
+@import url("./css/bootstrap.min.css");
+@import url("./css/aos.css");
+@import url("./css/swiper-bundle.min.css");
+@import url("./css/materialdesignicons.min.css");
+@import url("./css/style.css");
+@import url("./css/colors/default.css");
