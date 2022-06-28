@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextPage } from "next";
 import React, { Fragment } from "react";
-import NavigationBar from "../components/header/NavigationBar";
-import AboutSection from "../components/partials/AboutSection";
 import AppFooter from "../components/partials/AppFooter";
 import BackToTop from "../components/partials/BackToTop";
-import ContactForm from "../components/partials/ContactForm";
-import FeatureSection from "../components/partials/FeatureSection";
 import HomeBanner from "../components/partials/HomeBanner";
+import ContactForm from "../components/partials/ContactForm";
+import AboutSection from "../components/partials/AboutSection";
+import NavigationBar from "../components/header/NavigationBar";
+import FeatureSection from "../components/partials/FeatureSection";
 import ServiceSection from "../components/partials/ServiceSection";
 import TestimonySection from "../components/partials/TestimonySection";
 
