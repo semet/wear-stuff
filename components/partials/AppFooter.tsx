@@ -10,16 +10,16 @@ const AppFooter = () => {
 							<h6 className="text-uppercase fw-semibold">About</h6>
 							<ul className="list-unstyled footer-link mt-3 mb-0 fs-14">
 								<li>
-									<a href="javascript:void(0)">About</a>
+									<a href="#">About</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Submit on issue</a>
+									<a href="#">Submit on issue</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">GitHub Repo</a>
+									<a href="#">GitHub Repo</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Slack</a>
+									<a href="#">Slack</a>
 								</li>
 							</ul>
 						</div>
@@ -28,19 +28,19 @@ const AppFooter = () => {
 							<h6 className="text-uppercase fw-semibold">Gatting Started</h6>
 							<ul className="list-unstyled footer-link mt-3 mb-0 fs-14">
 								<li>
-									<a href="javascript:void(0)">introduction</a>
+									<a href="#">introduction</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Usage</a>
+									<a href="#">Usage</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Globls</a>
+									<a href="#">Globls</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Elements</a>
+									<a href="#">Elements</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Collection</a>
+									<a href="#">Collection</a>
 								</li>
 							</ul>
 						</div>
@@ -49,19 +49,19 @@ const AppFooter = () => {
 							<h6 className="text-uppercase fw-semibold">Resources</h6>
 							<ul className="list-unstyled footer-link mt-3 mb-0 fs-14">
 								<li>
-									<a href="javascript:void(0)">Monitoring Grader </a>
+									<a href="#">Monitoring Grader </a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Video Tutorial</a>
+									<a href="#">Video Tutorial</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Term &amp; Service</a>
+									<a href="#">Term &amp; Service</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Tulsy API</a>
+									<a href="#">Tulsy API</a>
 								</li>
 								<li>
-									<a href="javascript:void(0)">Marketplace</a>
+									<a href="#">Marketplace</a>
 								</li>
 							</ul>
 						</div>
@@ -75,7 +75,7 @@ const AppFooter = () => {
 								Semper nibh a dignissim Integer cursus tempsed.
 							</p>
 							<div className="footer-subcribe text-end shadow-sm d-inline-block">
-								<form action="javascript:void(0)">
+								<form action="#">
 									<input placeholder="Your Email Address" type="email" />
 									<button type="submit" className="btn btn-primary">
 										<i className="mdi mdi-bell-ring" />

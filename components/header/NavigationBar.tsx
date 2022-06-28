@@ -1,10 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const NavigationBar = () => {
+	const [isSticky, setIsSticky] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			//update isSticky on window scroll
+			setIsSticky(window.scrollY >= 50);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		console.log(isSticky);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [isSticky]);
 	return (
 		<nav
-			className="navbar navbar-expand-lg fixed-top navbar-white navbar-custom sticky"
+			className={`navbar navbar-expand-lg fixed-top navbar-white navbar-custom sticky ${
+				isSticky ? "nav-sticky" : ""
+			}`}
 			id="navbar"
 		>
 			<div className="container">

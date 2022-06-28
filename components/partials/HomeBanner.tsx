@@ -28,7 +28,7 @@ const HomeBanner = () => {
 								penatibus et magnis dis parturient montes, nascetur
 							</p>
 							<div className="home-btn hstack gap-2 flex-column d-sm-block mb-5 mb-sm-0">
-								<a className="btn btn-primary me-1" href="javascript:void(0)">
+								<a className="btn btn-primary me-1" href="#">
 									Request Free Demo
 								</a>
 							</div>
