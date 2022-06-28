@@ -1,6 +1,38 @@
 import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const ContactForm = () => {
+	const formik = useFormik({
+		initialValues: {
+			name: "",
+			email: "",
+			subject: "",
+			message: "",
+		},
+		validationSchema: Yup.object({
+			name: Yup.string()
+				.min(6, "Nama minimal 6 karakter")
+				.required("Nama harus diisi"),
+			email: Yup.string()
+				.email("Masukkan email yang valid")
+				.required("Email harus diisi"),
+			subject: Yup.string()
+				.min(6, "Subject minimal 10 karakter")
+				.required("Subjek harus diisi"),
+			message: Yup.string()
+				.min(50, "Pesan minimal 50 karakter")
+				.required("Pesan harus diisi"),
+		}),
+		onSubmit: (values) => {
+			fetch("/api/contact", {
+				method: "POST",
+				body: JSON.stringify(values),
+			})
+				.then((res) => res.json())
+				.then((data) => console.log(data));
+		},
+	});
 	return (
 		<section className="section contact" id="contact">
 			<div className="container">
@@ -22,7 +54,10 @@ const ContactForm = () => {
 					<div className="col-lg-6">
 						<form
 							method="post"
-							onSubmit={() => true}
+							onSubmit={(e) => {
+								e.preventDefault();
+								formik.handleSubmit();
+							}}
 							className="contact-form"
 							name="myForm"
 							id="myForm"
@@ -38,10 +73,24 @@ const ContactForm = () => {
 											name="name"
 											id="name"
 											type="text"
-											className="form-control"
-											placeholder="Enter your name*"
+											className={`form-control ${
+												formik.touched.name && formik.errors.name
+													? "is-invalid"
+													: ""
+											}`}
+											placeholder={
+												formik.touched.name && formik.errors.name
+													? formik.errors.name
+													: "Nama"
+											}
+											value={formik.values.name}
+											onChange={formik.handleChange}
+											onBlur={formik.handleBlur}
 										/>
 									</div>
+									{formik.touched.name && formik.errors.name ? (
+										<div className="text-danger mb-3">{formik.errors.name}</div>
+									) : null}
 								</div>
 								<div className="col-lg-6">
 									<div className="position-relative mb-3">
@@ -52,10 +101,26 @@ const ContactForm = () => {
 											name="email"
 											id="email"
 											type="email"
-											className="form-control"
-											placeholder="Enter your email*"
+											className={`form-control ${
+												formik.touched.email && formik.errors.email
+													? "is-invalid"
+													: ""
+											}`}
+											placeholder={
+												formik.touched.email && formik.errors.email
+													? formik.errors.email
+													: "email@example.com"
+											}
+											value={formik.values.email}
+											onChange={formik.handleChange}
+											onBlur={formik.handleBlur}
 										/>
 									</div>
+									{formik.touched.email && formik.errors.email ? (
+										<div className="text-danger mb-3">
+											{formik.errors.email}
+										</div>
+									) : null}
 								</div>
 								<div className="col-lg-12">
 									<div className="position-relative mb-3">
@@ -66,10 +131,26 @@ const ContactForm = () => {
 											name="subject"
 											id="subject"
 											type="text"
-											className="form-control"
-											placeholder="Subject"
+											className={`form-control ${
+												formik.touched.subject && formik.errors.subject
+													? "is-invalid"
+													: ""
+											}`}
+											placeholder={
+												formik.touched.subject && formik.errors.subject
+													? formik.errors.subject
+													: "subject"
+											}
+											value={formik.values.subject}
+											onChange={formik.handleChange}
+											onBlur={formik.handleBlur}
 										/>
 									</div>
+									{formik.touched.subject && formik.errors.subject ? (
+										<div className="text-danger mb-3">
+											{formik.errors.subject}
+										</div>
+									) : null}
 								</div>
 								<div className="col-lg-12">
 									<div className="position-relative mb-3">
@@ -77,14 +158,27 @@ const ContactForm = () => {
 											<i className="mdi mdi-comment-text-outline" />
 										</span>
 										<textarea
-											name="comments"
-											id="comments"
+											name="message"
+											id="message"
 											rows={4}
-											className="form-control"
-											placeholder="Enter your message*"
-											defaultValue={""}
+											className={`form-control ${
+												formik.errors.message ? "is-invalid" : ""
+											}`}
+											placeholder={
+												formik.touched.message && formik.errors.message
+													? formik.errors.message
+													: "Pesan anda"
+											}
+											value={formik.values.message}
+											onChange={formik.handleChange}
+											onBlur={formik.handleBlur}
 										/>
 									</div>
+									{formik.touched.message && formik.errors.message ? (
+										<div className="text-danger mb-3">
+											{formik.errors.message}
+										</div>
+									) : null}
 								</div>
 							</div>
 							<div className="row">

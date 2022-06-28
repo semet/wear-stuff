@@ -10,14 +10,18 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "formik": "^2.2.9",
     "next": "12.1.6",
+    "nodemailer": "^6.7.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "swiper": "^8.2.5"
+    "swiper": "^8.2.5",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
     "@types/node": "18.0.0",
+    "@types/nodemailer": "^6.4.4",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
     "eslint": "8.18.0",
