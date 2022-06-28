@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+import AOS from "aos";
 import { NextPage } from "next";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import AppFooter from "../components/partials/AppFooter";
 import BackToTop from "../components/partials/BackToTop";
 import HomeBanner from "../components/partials/HomeBanner";
@@ -12,6 +13,11 @@ import ServiceSection from "../components/partials/ServiceSection";
 import TestimonySection from "../components/partials/TestimonySection";
 
 const Home: NextPage = () => {
+	useEffect(() => {
+		AOS.init();
+		AOS.refresh();
+	});
+
 	return (
 		<Fragment>
 			{/* Main Navigation Bar */}

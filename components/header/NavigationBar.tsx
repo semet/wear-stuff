@@ -11,7 +11,6 @@ const NavigationBar = () => {
 		};
 
 		window.addEventListener("scroll", handleScroll);
-		console.log(isSticky);
 
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
@@ -75,18 +74,8 @@ const NavigationBar = () => {
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#pricing">
-								Pricing
-							</a>
-						</li>
-						<li className="nav-item">
 							<a className="nav-link" href="#testimonials">
 								Testimonials
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#team">
-								Team
 							</a>
 						</li>
 						<li className="nav-item">

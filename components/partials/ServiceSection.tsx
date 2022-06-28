@@ -16,7 +16,7 @@ const ServiceSection = () => {
 							</p>
 						</div>
 					</div>
-					<div className="col-lg-3">
+					<div className="col-lg-3" data-aos="fade-right" data-aos-duration={1000}>
 						<div className="card">
 							<div className="card-body">
 								<div className="box">
@@ -36,7 +36,7 @@ const ServiceSection = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-lg-3">
+					<div className="col-lg-3" data-aos="fade-down" data-aos-duration={1000}>
 						<div className="card">
 							<div className="card-body">
 								<div className="box">
@@ -56,7 +56,7 @@ const ServiceSection = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-lg-3">
+					<div className="col-lg-3" data-aos="fade-down" data-aos-duration={1000}>
 						<div className="card">
 							<div className="card-body">
 								<div className="box">
@@ -76,7 +76,7 @@ const ServiceSection = () => {
 							</div>
 						</div>
 					</div>
-					<div className="col-lg-3">
+					<div className="col-lg-3" data-aos="fade-left" data-aos-duration={1000}>
 						<div className="card">
 							<div className="card-body">
 								<div className="box">
